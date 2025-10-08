@@ -1,0 +1,88 @@
+/* Layout */
+main {
+  margin: 0 auto;
+  min-width: 200px;
+  max-width: 1000px;
+  /* font-size: 10px; */
+}
+
+/* p {
+    font-size: 30px;
+} */
+
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* ************* */
+/* Gallery Items */
+/* ************* */
+
+/* gallery item container */
+figure {
+  display: grid;
+  height: 100%;
+}
+
+/* 2 row spanning image */
+.fig-portrait {
+  grid-row: span 2;
+  height: 100%;
+}
+
+/* full width image */
+.fig-landscape {
+  grid-column: 1 / -1;
+}
+/* gallery item image */
+img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  grid-row: 1;
+  grid-column: 1;
+}
+
+/* gallery item text layout */
+figcaption {
+  grid-row: 1;
+  grid-column: 1;
+
+  justify-self: end;
+  align-self: end;
+
+  text-align: end;
+
+  color: rgb(169, 219, 235);
+  margin: 0 8px 4px 0;
+  font-size: 25px;
+}
+
+/* *********************** */
+/* Non Gallery UI Elements */
+/* *********************** */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0 4rem 0;
+  width: 100%;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: black;
+  color: whitesmoke;
+}
